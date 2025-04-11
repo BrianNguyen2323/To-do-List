@@ -17,7 +17,7 @@ const Task = () => {
   return (
     <div className='flex flex-row justify-center m-5 max-w-full min-h-auto gap-2 p-1'>
       <Checkbox
-        className='mt-3'
+        className='mt-2.5'
         checked={checked}
         onCheckedChange={handleCheckboxChange}
       />
@@ -35,7 +35,8 @@ const Task = () => {
         <div
           className={cn(
             'w-full !text-2xl overflow-y-hidden break-words',
-            checked ? 'line-through text-gray-400' : 'text-base'
+            checked ? 'line-through text-gray-400' : 'text-base',
+            'focus:border-transparent focus:ring-0 !outline-none'
           )}
           contentEditable='true'
           itemType='textarea'
